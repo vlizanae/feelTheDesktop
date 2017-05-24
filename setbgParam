@@ -1,7 +1,6 @@
 #!/bin/bash
 
 home=$HOME/Pictures/thebest/prototype2
-picture=$(( ( ($1*60 +$2)/8 +37) %180 +1 ))
-echo $picture
+picture=$1
 export DISPLAY=:0
 gsettings set org.gnome.desktop.background picture-uri "file://$home/thumb$(printf "%03d" $(( 10#$picture )) ).png"
