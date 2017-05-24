@@ -1,0 +1,22 @@
+# Requirements:
+# - ffmpeg
+# - ImageMagick
+
+# get the frames
+ffmpeg -i DepressedRick.mkv -ss 00:21:44.000 thumb%04d.png -hide_banner
+
+# renaming the frames example
+for file in `ls`; do
+	mv $file thumb$((${file//[^0-9]}+40)).png
+done
+
+# renaming the frames in reverse example
+for file in `ls`; do
+	mv $file thumb$((259-${file//[^0-9]})).png
+done
+
+# overlaying images
+for i in {0..20}; do
+	composite -blend $(($i * 5)) thumb001.png thumb$(($i+160)).png thumb$(($i+160)).png
+done
+
