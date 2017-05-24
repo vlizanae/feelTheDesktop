@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# usage ./setbgDEBUG hour minute
 home=$HOME/Pictures/thebest/prototype2
 picture=$(( ( ($1*60 +$2)/8 +37) %180 +1 ))
 echo $picture

@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# for when you want to test a picture
 home=$HOME/Pictures/thebest/prototype2
 picture=$1
 export DISPLAY=:0
