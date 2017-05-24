@@ -10,5 +10,3 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
 	gsettings set org.gnome.desktop.background picture-uri "file://$home/thumb$(printf "%03d" $(( 10#$picture )) ).png"
 fi
 
-echo -e "Set!"
-
