@@ -6,8 +6,10 @@ picture=$(( ( (`date +%_H`*60 +`date +%_M`)/8 +37) %180 +1 ))
 if [ "$(uname)" == "Darwin" ]; then
 	osascript -e "tell application \"Finder\" to set desktop picture to POSIX file \"/usr/local/sadrick/thumb$(printf "%03d" $(( 10#$picture )) ).png\""
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
-	export DISPLAY=:0
+  export DISPLAY=:0
+# wmctrl is the only way I found able to get the DE from a cron ENV... Must be a better solution
   desktop=$(wmctrl -m | grep -oP 'Name: \K.*')
+  desktop="${desktop,,}"
   case $desktop in
   gnome )
       gsettings set org.gnome.desktop.background picture-uri "file://$home/thumb$(printf "%03d" $(( 10#$picture )) ).png"
