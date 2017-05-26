@@ -1,9 +1,9 @@
 # Readme
 
-Change your background at the rithm of Rick !
+Change your background at the rythm of Rick !
 
 You can run Downloader and you're set to go. It creates a folder in `/usr/local`
-and downloads the images requiered to run the wallpaper. Then it downloads the
+and downloads the images required to run the wallpaper. Then it downloads the
 script to change the background and installs it in the crontab.
 
 You can also download the debug and param scripts. The debug script is for
@@ -16,4 +16,4 @@ and the param script to test certain wallpaper
 ./setbgParam 135 # sets the wallpaper named thumb135.png in the images folder
 ```
 
-The commands used to get the video frames and renaming are listed in the not executable file `commands`, but be carefull because those haven't been polished.
+The commands used to get the video frames and renaming are listed in the not executable file `commands`, but be careful because those haven't been polished.
