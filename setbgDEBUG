@@ -5,4 +5,12 @@ home=/usr/local/sadRick/images
 picture=$(( ( ($1*60 +$2)/8 +37) %180 +1 ))
 echo $picture
 export DISPLAY=:0
-gsettings set org.gnome.desktop.background picture-uri "file://$home/thumb$(printf "%03d" $(( 10#$picture )) ).png"
+desktop=$(wmctrl -m | grep -oP 'Name: \K.*')
+case $desktop in
+gnome )
+    gsettings set org.gnome.desktop.background picture-uri "file://$home/thumb$(printf "%03d" $(( 10#$picture )) ).png"
+    ;;
+* )
+    feh --bg-scale "$home/thumb$(printf "%03d" $(( 10#$picture )) ).png"
+    ;;
+esac
