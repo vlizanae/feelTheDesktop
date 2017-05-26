@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # for when you want to test a picture
-home=$HOME/Pictures/thebest/prototype2
+home=/usr/local/sadRick/images
 picture=$1
 export DISPLAY=:0
 gsettings set org.gnome.desktop.background picture-uri "file://$home/thumb$(printf "%03d" $(( 10#$picture )) ).png"

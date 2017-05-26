@@ -21,4 +21,4 @@ for i in {0..20}; do
 done
 
 # crontab entry
-* * * * * ~/path/to/script/setbg
+* * * * * /usr/local/sadRick/setbg

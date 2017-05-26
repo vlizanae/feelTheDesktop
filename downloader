@@ -1,4 +1,16 @@
 #!/bin/bash
+cd /usr/local/
+mkdir sadRick
+cd sadRick
 mkdir images
 cd images
 wget labcomp.cl/~vlizana/rickWallpaper/thumb{001..180}.png
+
+cd /usr/local/bin
+wget raw.githubusercontent.com/vlizana-gh/feelTheDesktop/master/setbg
+chmod u+x setbg
+
+crontab -l > tempCron
+echo "* * * * * /usr/local/bin/setbg" >> tempCron
+crontab tempCron
+rm tempCron

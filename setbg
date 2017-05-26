@@ -1,6 +1,6 @@
 #!/bin/bash
 
-home=/home/vlizana/Pictures/thebest/prototype2
+home=/usr/local/sadRick/images
 picture=$(( ( (`date +%_H`*60 +`date +%_M`)/8 +37) %180 +1 ))
 export DISPLAY=:0
 gsettings set org.gnome.desktop.background picture-uri "file://$home/thumb$(printf "%03d" $(( 10#$picture )) ).png"
