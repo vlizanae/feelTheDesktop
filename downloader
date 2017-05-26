@@ -1,0 +1,4 @@
+#!/bin/bash
+mkdir images
+cd images
+wget labcomp.cl/~vlizana/rickWallpaper/thumb{001..180}.png
