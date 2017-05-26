@@ -4,7 +4,10 @@ Change your background at the rythm of Rick !
 
 You can run Downloader and you're set to go. It creates a folder in `/usr/local`
 and downloads the images required to run the wallpaper. Then it downloads the
-script to change the background and installs it in the crontab.
+script to change the background and installs it in the crontab. 
+
+In case gnome is not your desktop environment, "wmctrl" and "feh" are needed to respectively detect
+your DE and display the wallpaper.
 
 You can also download the debug and param scripts. The debug script is for
 testing which wallpaper comes out at a certain hour
