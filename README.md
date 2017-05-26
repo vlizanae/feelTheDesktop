@@ -15,3 +15,5 @@ and the param script to test certain wallpaper
 ```
 ./setbgParam 135 # sets the wallpaper named thumb135.png in the images folder
 ```
+
+The commands used to get the video frames and renaming are listed in the not executable file `commands`, but be carefull because those haven't been polished.
