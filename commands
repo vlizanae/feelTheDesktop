@@ -20,5 +20,6 @@ for i in {0..20}; do
 	composite -blend $(($i * 5)) thumb001.png thumb$(($i+160)).png thumb$(($i+160)).png
 done
 
-# crontab entry
+# crontab entry examples
 * * * * * /usr/local/sadRick/setbg
+*/8 * * * * /usr/local/sadRick/setbg

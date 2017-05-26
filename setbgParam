@@ -4,8 +4,7 @@
 home=/usr/local/sadRick/images
 picture=$1
 export DISPLAY=:0
-desktop=$(wmctrl -m | grep -oP 'Name: \K.*')
-case $desktop in
+case $DESKTOP_SESSION in
 gnome )
     gsettings set org.gnome.desktop.background picture-uri "file://$home/thumb$(printf "%03d" $(( 10#$picture )) ).png"
     ;;
