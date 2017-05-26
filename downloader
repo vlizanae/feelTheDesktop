@@ -11,6 +11,6 @@ wget raw.githubusercontent.com/vlizana-gh/feelTheDesktop/master/setbg
 chmod u+x setbg
 
 crontab -l > tempCron
-echo "* * * * * /usr/local/bin/setbg" >> tempCron
+echo "*/8 * * * * /usr/local/bin/setbg" >> tempCron
 crontab tempCron
 rm tempCron
