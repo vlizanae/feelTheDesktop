@@ -4,7 +4,7 @@ mkdir sadRick
 cd sadRick
 mkdir images
 cd images
-wget labcomp.cl/~vlizana/rickWallpaper/thumb{001..180}.png
+wget --quiet --show-progress -A png -m -p -E -k -K -np -nd labcomp.cl/~vlizana/rickWallpaper/
 
 cd /usr/local/bin
 wget raw.githubusercontent.com/vlizana-gh/feelTheDesktop/master/setbg
