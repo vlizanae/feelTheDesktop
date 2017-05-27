@@ -1,10 +1,11 @@
 #!/bin/bash
 
 home=/usr/local/sadRick/images
+
 picture=$(( ( (`date +%_H`*60 +`date +%_M`)/8 +37) %180 +1 ))
 
 if [ "$(uname)" == "Darwin" ]; then
-	osascript -e "tell application \"Finder\" to set desktop picture to POSIX file \"/usr/local/sadrick/thumb$(printf "%03d" $(( 10#$picture )) ).png\""
+	osascript -e "tell application \"Finder\" to set desktop picture to POSIX file \"$home/thumb$(printf "%03d" $(( 10#$picture )) ).png\""
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
   export DISPLAY=:0
   case $DESKTOP_SESSION in
