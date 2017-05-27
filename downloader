@@ -11,7 +11,7 @@ wget raw.githubusercontent.com/vlizana-gh/feelTheDesktop/master/setbg
 chmod u+x setbg
 
 crontab -l > tempCron
-echo "* * * * * /usr/local/bin/setbg" >> tempCron
+echo "* * * * * /usr/local/bin/setbg >> /dev/null 2>&1" >> tempCron
 # if you want you can set the change every 8 minutes instead of every minute uncommenting the line below and commenting the line above.
 # is set to every minute by default because if you close your laptop in the night and open it in the day it only takes up to a minute to update.
 #echo "*/8 * * * * /usr/local/bin/setbg" >> tempCron
